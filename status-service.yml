@@ -1,6 +1,6 @@
 logging:
   level:
-    root: ERROR
+    root: INFO
     za.co.discovery: DEBUG
 
 secret:
