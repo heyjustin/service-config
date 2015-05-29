@@ -1,2 +1,2 @@
 secret:
-  ${random.value}
+  I found it
