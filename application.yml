@@ -3,6 +3,11 @@
 
 # The first section contains application wide settings applied regardless of a profile
 
+# JMX
+spring:
+  jmx:
+    enabled: true
+
 logging:
   level: INFO
   file: /var/log/app.log
@@ -17,11 +22,6 @@ server:
     access-log-pattern: "%h %t \"%r\" %s %b"
     basedir: /var/log
 
-# JMX
-spring:
-  jmx:
-    enabled: true
-
 # Management endpoints
 management:
   context-path: /manage
@@ -35,17 +35,16 @@ endpoints:
     enabled: true
 
 ---
+# These are the service wide settings that are applied during development
 spring:
   profiles: development
-
-# Data access
-spring:
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
 
 ---
+# A profile with windows specific paths
 spring:
   profiles: windows
 
