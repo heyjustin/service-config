@@ -10,7 +10,7 @@ spring:
 
 logging:
   level:
-    root: DEBUG
+    root: INFO
 
 # Tomcat Server settings
 server:

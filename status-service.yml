@@ -1,2 +1,6 @@
+logging:
+  level:
+    root: ERROR
+
 secret:
   "Hide this away"
