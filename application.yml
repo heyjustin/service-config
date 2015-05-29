@@ -48,4 +48,7 @@ spring:
 # A profile with windows specific paths
 spring:
   profiles: windows
+server:
+  tomcat:
+    basedir: c:/var/logs
 
