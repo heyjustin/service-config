@@ -10,7 +10,7 @@ spring:
 
 logging:
   level:
-    *: DEBUG
+    "*": DEBUG
   file: /var/log/app.log
 
 # Tomcat Server settings
