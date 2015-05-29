@@ -49,8 +49,8 @@ spring:
   profiles: windows
 
 logging:
-  file: c:/tmp/app.log
+  file: c:/var/log/app.log
 server:
   tomcat:
-    basedir: /var/log
+    basedir: c:/var/log
 
