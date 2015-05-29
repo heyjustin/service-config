@@ -3,4 +3,4 @@ logging:
     za.co.discovery: INFO
 
 secret:
-  "Hidden"
+  "You should really change this"
