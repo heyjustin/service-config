@@ -35,7 +35,6 @@ endpoints:
     enabled: true
 
 ---
-# These are the service wide settings that are applied during development
 spring:
   profiles: development
 
@@ -47,7 +46,6 @@ spring:
       ddl-auto: create-drop
 
 ---
-# A profile with windows specific paths
 spring:
   profiles: windows
 
