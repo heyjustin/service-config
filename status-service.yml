@@ -1,6 +1,7 @@
 logging:
   level:
     root: ERROR
+    za.co.discovery: DEBUG
 
 secret:
   "Hide this away"
