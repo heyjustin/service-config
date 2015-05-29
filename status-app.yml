@@ -1,6 +1,6 @@
 logging:
   level:
-    za.co.discovery: TRACE
+    za.co.discovery: INFO
 
 secret:
-  "Hide this away"
+  "Hidden"
