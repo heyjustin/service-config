@@ -10,8 +10,7 @@ spring:
 
 logging:
   level:
-    root: DEBUG
-  file: /var/log/app.log
+    root: INFO
 
 # Tomcat Server settings
 server:
@@ -49,8 +48,3 @@ spring:
 spring:
   profiles: windows
 
-logging:
-  file: c:/var/log/app.log
-server:
-  tomcat:
-    basedir: c:/var/log
