@@ -1,1 +1,3 @@
 secret: ${random.value}
+zzz:
+  custom (status-service.yml)

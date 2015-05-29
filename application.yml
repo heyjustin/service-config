@@ -34,6 +34,9 @@ endpoints:
   shutdown:
     enabled: true
 
+zzz:
+  default
+
 ---
 # These are the service wide settings that are applied during development
 spring:
@@ -42,6 +45,9 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
+
+zzz:
+  development
 
 ---
 # A profile with windows specific paths
@@ -53,4 +59,7 @@ logging:
 server:
   tomcat:
     basedir: c:/var/log
+
+zzz:
+  windows
 
