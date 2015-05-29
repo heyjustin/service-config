@@ -1,6 +1,6 @@
 logging:
   level:
-    za.co.discovery: INFO
+    za.co.discovery: TRACE
 
 secret:
   "You should really change this"
