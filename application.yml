@@ -50,4 +50,4 @@ spring:
   profiles: windows
 server:
   tomcat:
-    basedir: c:/var/logs
+    basedir: c:/var/log
