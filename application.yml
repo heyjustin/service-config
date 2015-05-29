@@ -1,0 +1,59 @@
+# A YAML file is essentially a sequence of documents separated by --- lines.
+# Each document is parsed separately to a flattened map.
+
+# The first section contains application wide settings applied regardless of a profile
+
+logging:
+  level: INFO
+  file: /var/log/app.log
+
+# Tomcat Server settings
+server:
+  port: 8080
+  address: 0.0.0.0
+  servletPath: /
+  tomcat:
+    access-log-enabled: true
+    access-log-pattern: %h %t "%r" %s %b
+    basedir: /var/log
+
+# JMX
+spring:
+  jmx:
+    enabled: true
+
+# Management endpoints
+management:
+  context-path: /manage
+
+endpoints:
+  health:
+    sensitive: false
+  info:
+    sensitive: false
+  shutdown:
+    enabled: true
+
+---
+# These are the service wide settings that are applied during development
+spring:
+  profiles: development
+
+# Data access
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+
+---
+# A profile with windows specific paths
+spring:
+  profiles: windows
+
+logging:
+  file: c:/tmp/app.log
+server:
+  tomcat:
+    basedir: /var/log
+
