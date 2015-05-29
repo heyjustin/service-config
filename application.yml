@@ -51,4 +51,3 @@ spring:
 server:
   tomcat:
     basedir: c:/var/logs
-
