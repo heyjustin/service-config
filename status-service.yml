@@ -1,9 +1,7 @@
 logging:
   level:
     root: INFO
-    za:
-      co:
-        discovery: DEBUG
+    za.co.discovery: TRACE
 
 secret:
   "Hide this away"
