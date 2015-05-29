@@ -11,6 +11,7 @@ spring:
 logging:
   level:
     root: INFO
+  file: c:/var/log/status-server-123.log
 
 # Tomcat Server settings
 server:
