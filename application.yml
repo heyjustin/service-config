@@ -14,7 +14,7 @@ server:
   servletPath: /
   tomcat:
     access-log-enabled: true
-    access-log-pattern: %%h %%t "%%r" %%s %%b
+    access-log-pattern: "%h %t \"%r\" %s %b"
     basedir: /var/log
 
 # JMX
