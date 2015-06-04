@@ -23,8 +23,9 @@ server:
     basedir: /var/log
 
 # Management endpoints
-management:
-  context-path: /manage
+# Use the default path otherwise eureka can't find it
+#management:
+#  context-path: /manage
 
 endpoints:
   health:
