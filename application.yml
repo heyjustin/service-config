@@ -45,8 +45,8 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    statusPageUrlPath: ${management.contextPath}/info/
-    healthCheckUrlPath: ${management.contextPath}/health/
+    statusPageUrlPath: /manage/info/
+    healthCheckUrlPath: /manage/health/
 
 ---
 # These are the service wide settings that are applied during development
