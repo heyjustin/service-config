@@ -44,7 +44,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 30
     metadataMap:
-      instanceId: ${spring.application.name}:${PID}
+      instanceId: ${spring.application.name}:PID-${PID}
     statusPageUrlPath: /manage/info/
     healthCheckUrlPath: /manage/health/
 
