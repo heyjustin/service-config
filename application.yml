@@ -7,6 +7,10 @@
 spring:
   jmx:
     enabled: true
+  cloud:
+    config:
+      # If we can't contact the config server, don't start up
+      failFast: true
 
 logging:
   level:
