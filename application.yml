@@ -42,7 +42,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    leaseRenewalIntervalInSeconds: 30
+    leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${spring.application.name}:PID-${PID}
     statusPageUrlPath: /manage/info/
