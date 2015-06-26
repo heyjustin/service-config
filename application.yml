@@ -27,9 +27,6 @@ server:
 
 # Kafka Server settings
 kafka:
-  # Remove 'url' once the brokerList change has been absorbed
-  url: localhost:9092
-  brokerList: localhost:9092
   zookeeper: localhost:2181
 
 
