@@ -1,7 +1,22 @@
 zuul:
   routes:
     auth: /auth/**
-    running-main-ui: /**
+    running-man-ui: /**
+
+discovery:
+  authentication:
+    defaultPolicy: REQUIRE_TOKEN
+    openPaths:
+      - /auth/**
+      - /login.html 
+      - /css/**
+      - /img/**
+      - /js/**
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
 
 server:
   port: 8765

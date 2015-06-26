@@ -58,6 +58,7 @@ discovery:
   authentication:
     jwtSigningKey: theSecretKey
     loginServerEnabled: false
+    defaultPolicy: OPEN
 
 ---
 # These are the service wide settings that are applied during development
