@@ -1,0 +1,13 @@
+zuul:
+  routes:
+    auth: /auth/**
+    running-main-ui: /**
+
+server:
+  port: 8765
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+    com.netflix: DEBUG

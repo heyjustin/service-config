@@ -19,6 +19,7 @@ logging:
 # Tomcat Server settings
 server:
   address: 0.0.0.0
+  port: 0
   servletPath: /
   tomcat:
     access-log-enabled: true
@@ -47,11 +48,16 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    leaseRenewalIntervalInSeconds: 10
+    leaseRenewalIntervalInSeconds: 5
     metadataMap:
       instanceId: ${spring.application.name}:PID-${PID}
     statusPageUrlPath: /manage/info/
     healthCheckUrlPath: /manage/health/
+
+discovery:
+  authentication:
+    jwtSigningKey: theSecretKey
+    loginServerEnabled: false
 
 ---
 # These are the service wide settings that are applied during development
