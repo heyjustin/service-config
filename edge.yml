@@ -9,6 +9,7 @@ discovery:
     openPaths:
       - /auth/**
       - /runningman/login.html 
+      - /runningman/index.html
       - /runningman/css/**
       - /runningman/img/**
       - /runningman/js/**
