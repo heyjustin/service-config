@@ -1,0 +1,6 @@
+server:
+  port: 9100
+
+kafka:
+  consumeTopic: pointsEvents
+  publishTopic: statusEvents
