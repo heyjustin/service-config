@@ -1,17 +1,17 @@
 zuul:
   routes:
     auth: /auth/**
-    running-man-ui: /**
+    running-man-ui: /runningman/**
 
 discovery:
   authentication:
     defaultPolicy: REQUIRE_TOKEN
     openPaths:
       - /auth/**
-      - /login.html 
-      - /css/**
-      - /img/**
-      - /js/**
+      - /runningman/login.html 
+      - /runningman/css/**
+      - /runningman/img/**
+      - /runningman/js/**
 
 eureka:
   client:
