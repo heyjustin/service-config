@@ -1,5 +1,12 @@
 discovery:
   authentication:
+    initialTokenTtlSeconds: 10
+    renewedTokenTtlSeconds: 20
+    renewalTtlThresholdSeconds: 10
     loginServerEnabled: true
     openPaths:
       - /login
+
+logging:
+  level:
+    za.co.discovery.mspoc.security: TRACE

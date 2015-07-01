@@ -5,14 +5,20 @@ zuul:
 
 discovery:
   authentication:
+    initialTokenTtlSeconds: 10
+    renewedTokenTtlSeconds: 20
+    renewalTtlThresholdSeconds: 10
     defaultPolicy: REQUIRE_TOKEN
     openPaths:
       - /auth/**
-      - /runningman/login.html 
-      - /runningman/index.html
+      - /runningman
+      - /runningman/
+      - /runningman/runningman
+      - /runningman/login 
+      - /runningman/*.html 
       - /runningman/css/**
       - /runningman/img/**
-      - /runningman/js/**
+      - /runningman/js/*
 
 eureka:
   client:
@@ -25,5 +31,6 @@ server:
 logging:
   level:
     ROOT: INFO
-    org.springframework.web: DEBUG
-    com.netflix: DEBUG
+    org.springframework.web: WARN
+    com.netflix: WARN
+    za.co.discovery.mspoc.security: TRACE
