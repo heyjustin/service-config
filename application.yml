@@ -11,10 +11,25 @@ spring:
     config:
       # System properties should take preference
       overrideSystemProperties: false
+  
+  # Datasource configuration
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:tcp://127.0.0.1:11000/mem:test
-
+  
+  # Jackson Configuration
+  jackson:
+    serialization:
+      # Output dates in the ISO format rather than millis since the epoch
+      WRITE_DATES_AS_TIMESTAMPS: false
+  
+  # Java Persistence API configuration
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      
+# Logging configuration
 logging:
   level:
     root: INFO
@@ -32,9 +47,6 @@ server:
 # Kafka Server settings
 kafka:
   zookeeper: localhost:2181
-
-h2:
-  port: 11000
 
 # Management endpoints
 management:
@@ -64,20 +76,3 @@ discovery:
     jwtSigningKey: theSecretKey
     loginServerEnabled: false
     defaultPolicy: OPEN
-
----
-# These are the service wide settings that are applied during development
-spring:
-  profiles: development
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: create-drop
-
----
-# A profile with windows specific paths
-spring:
-  profiles: windows
-server:
-  tomcat:
-    basedir: c:/var/log
