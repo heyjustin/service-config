@@ -47,6 +47,8 @@ server:
 # Kafka Server settings
 kafka:
   zookeeper: localhost:2181
+  broker:
+    list: localhost:9092
 
 # Management endpoints
 management:
