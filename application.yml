@@ -25,9 +25,9 @@ spring:
   
   # Java Persistence API configuration
   jpa:
-    show-sql: true
+    show-sql: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
       
 # Logging configuration
 logging:
