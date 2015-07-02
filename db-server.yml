@@ -4,6 +4,3 @@ server:
 db:
   server:
     port: 11000
-
-kafka:
-  publishTopic: deviceData
