@@ -10,6 +10,7 @@ discovery:
     renewalTtlThresholdSeconds: 10000
     defaultPolicy: REQUIRE_TOKEN
     openPaths:
+      - /manage/**
       - /auth/**
       - /runningman
       - /runningman/
