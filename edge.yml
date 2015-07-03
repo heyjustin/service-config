@@ -5,9 +5,9 @@ zuul:
 
 discovery:
   authentication:
-    initialTokenTtlSeconds: 10
-    renewedTokenTtlSeconds: 20
-    renewalTtlThresholdSeconds: 10
+    initialTokenTtlSeconds: 10000
+    renewedTokenTtlSeconds: 20000
+    renewalTtlThresholdSeconds: 10000
     defaultPolicy: REQUIRE_TOKEN
     openPaths:
       - /auth/**
