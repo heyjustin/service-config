@@ -1,8 +1,8 @@
 discovery:
   authentication:
-    initialTokenTtlSeconds: 10
-    renewedTokenTtlSeconds: 20
-    renewalTtlThresholdSeconds: 10
+    initialTokenTtlSeconds: 60
+    renewedTokenTtlSeconds: 600
+    renewalTtlThresholdSeconds: 300
     loginServerEnabled: true
     openPaths:
       - /login

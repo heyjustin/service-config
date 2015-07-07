@@ -65,12 +65,34 @@ endpoints:
   shutdown:
     enabled: true
 
+
+ribbon:
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: true
+  ServerListRefreshInterval: 5000
+  ReadTimeout: 500
+  ConnectTimeout: 500
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
   instance:
     leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 10
     metadataMap:
       instanceId: ${spring.application.name}:PID-${PID}
     statusPageUrlPath: /manage/info/

@@ -1,13 +1,17 @@
 zuul:
   routes:
-    auth: /auth/**
-    running-man-ui: /runningman/**
+    auth:
+      path: /auth/**
+      retryable: true
+    running-man-ui:
+      path: /runningman/**
+      retryable: true
 
 discovery:
   authentication:
-    initialTokenTtlSeconds: 10000
-    renewedTokenTtlSeconds: 20000
-    renewalTtlThresholdSeconds: 10000
+    initialTokenTtlSeconds: 60
+    renewedTokenTtlSeconds: 600
+    renewalTtlThresholdSeconds: 300
     defaultPolicy: REQUIRE_TOKEN
     openPaths:
       - /manage/**
@@ -24,7 +28,6 @@ discovery:
 eureka:
   client:
     registerWithEureka: false
-    fetchRegistry: true
 
 server:
   port: 8765
