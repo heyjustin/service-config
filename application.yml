@@ -11,28 +11,32 @@ spring:
     config:
       # System properties should take preference
       overrideSystemProperties: false
-  
+
   # Datasource configuration
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:tcp://127.0.0.1:11000/mem:test
-  
+
   # Jackson Configuration
   jackson:
     serialization:
       # Output dates in the ISO format rather than millis since the epoch
       WRITE_DATES_AS_TIMESTAMPS: false
-  
+
   # Java Persistence API configuration
   jpa:
     show-sql: false
     hibernate:
       ddl-auto: create-drop
-      
+
 # Logging configuration
 logging:
   level:
     root: INFO
+  logstash:
+    enabled: true
+    host: localhost
+    port: 5001
 
 # Tomcat Server settings
 server:
